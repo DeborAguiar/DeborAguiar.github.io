@@ -1,0 +1,5 @@
+{
+    "reactComponentGenerator.createStoriesFile": false,
+    "reactComponentGenerator.stylesLanguage": "css",
+    "reactComponentGenerator.verboseStoriesComments": false
+}
