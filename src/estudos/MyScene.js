@@ -29,17 +29,39 @@ function MyScene() {
         plane.position.y = -1;
         plane.receiveShadow = true;
 
+        //Esfera
+        const sphereGeometry = new THREE.SphereGeometry(0.05, 32, 32);
+        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(2, 1, 3)
+
+        const sphereLight = new THREE.PointLight(0xff0000, 2, 50);
+        sphereLight.position.set(0, 0, 0);
+        sphere.add(sphereLight);
+
         scene.add(cube);
         scene.add(plane);
+        scene.add(sphere);
+
 
         //Luz branca ambiente
-        const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+        /* const pointLight = new THREE.PointLight(0xffffff, 1, 100);
         pointLight.position.set(2, 2, 2);
         pointLight.castShadow = true
-        scene.add(pointLight);
+        scene.add(pointLight); */
 
+        const radius = 2;
+        let angle = 0;
+        
         function animate() {
             requestAnimationFrame(animate);
+
+            // Atualizando o ângulo da esfera
+            angle += 0.01;
+
+            // Calculando a nova posição da esfera
+            sphere.position.x = radius * Math.cos(angle);
+            sphere.position.z = radius * Math.sin(angle);
             
             renderer.render(scene, camera);
         }
