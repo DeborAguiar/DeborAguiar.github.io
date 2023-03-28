@@ -12,6 +12,8 @@ function MyScene() {
         camera.position.z = 5;
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         document.body.appendChild(renderer.domElement);
         
         //Cubo
@@ -20,6 +22,7 @@ function MyScene() {
             color: 0xff0000,
         });
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+        cube.castShadow = true;
 
         //Chão
         const planeGeometry = new THREE.PlaneGeometry(10, 10);
@@ -27,7 +30,7 @@ function MyScene() {
         const plane = new THREE.Mesh(planeGeometry, planeMaterial);
         plane.rotation.x = -Math.PI / 2;
         plane.position.y = -1;
-        plane.receiveShadow = true;
+        plane.receiveShadow = true
 
         //Esfera
         const sphereGeometry = new THREE.SphereGeometry(0.05, 32, 32);
@@ -37,6 +40,7 @@ function MyScene() {
 
         const sphereLight = new THREE.PointLight(0xff0000, 2, 50);
         sphereLight.position.set(0, 0, 0);
+        sphereLight.castShadow = true
         sphere.add(sphereLight);
 
         scene.add(cube);
