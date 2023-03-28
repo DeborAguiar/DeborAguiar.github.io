@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import * as THREE from 'three';
-import cubeTextureFile from '../assets/forest_floor_diff_4k.jpg';
+import sky from '../assets/sky.jpg';
 
 function MyScene() {
     const sceneRef = useRef(null);
@@ -39,6 +39,10 @@ function MyScene() {
         scene.add(cube);
         scene.add(plane);
 
+        //Backround
+        const textureLoader = new THREE.TextureLoader();
+        const texture = textureLoader.load(sky);
+        scene.background = texture;
 
         //Luz branca ambiente
         const pointLight = new THREE.PointLight(0xffffff, 1, 100);
