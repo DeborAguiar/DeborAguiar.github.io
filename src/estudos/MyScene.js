@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import * as THREE from 'three';
+import cubeTextureFile from '../assets/forest_floor_diff_4k.jpg';
 
 function MyScene() {
     const sceneRef = useRef(null);
@@ -15,11 +16,14 @@ function MyScene() {
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         document.body.appendChild(renderer.domElement);
+
+        const textureLoader  = new THREE.TextureLoader()
         
         //Cubo
-        const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-        const cubeMaterial = new THREE.MeshStandardMaterial({
-            color: 0xff0000,
+        const cubeTexture = textureLoader.load(cubeTextureFile);
+        const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
+        const cubeMaterial = new THREE.MeshBasicMaterial({
+            map: cubeTexture,
         });
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
         cube.castShadow = true;
@@ -32,40 +36,18 @@ function MyScene() {
         plane.position.y = -1;
         plane.receiveShadow = true
 
-        //Esfera
-        const sphereGeometry = new THREE.SphereGeometry(0.05, 32, 32);
-        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        sphere.position.set(2, 1, 3)
-
-        const sphereLight = new THREE.PointLight(0xff0000, 2, 50);
-        sphereLight.position.set(0, 0, 0);
-        sphereLight.castShadow = true
-        sphere.add(sphereLight);
-
         scene.add(cube);
         scene.add(plane);
-        scene.add(sphere);
 
 
         //Luz branca ambiente
-        /* const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+        const pointLight = new THREE.PointLight(0xffffff, 1, 100);
         pointLight.position.set(2, 2, 2);
         pointLight.castShadow = true
-        scene.add(pointLight); */
-
-        const radius = 2;
-        let angle = 0;
+        scene.add(pointLight);
         
         function animate() {
             requestAnimationFrame(animate);
-
-            // Atualizando o ângulo da esfera
-            angle += 0.01;
-
-            // Calculando a nova posição da esfera
-            sphere.position.x = radius * Math.cos(angle);
-            sphere.position.z = radius * Math.sin(angle);
             
             renderer.render(scene, camera);
         }
