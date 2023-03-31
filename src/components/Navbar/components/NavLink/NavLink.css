@@ -2,12 +2,12 @@ a{
   cursor: pointer;
 }
 
-a > * {
+a.nav-link > * {
   text-decoration: none;
   position: relative;
 }
 
-a > *::before {
+a.nav-link > *::before {
   content: "";
   position: absolute;
   left: 0;
@@ -18,11 +18,11 @@ a > *::before {
   transition: width 0.2s;
 }
 
-a:not(.active) > *::before {
+a.nav-link:not(.active) > *::before {
   width: 0;
 }
 
-a.active > *::before,
-a:hover > *::before{
+a.nav-link.active > *::before,
+a.nav-link:hover > *::before{
   width: 100%;
 }
