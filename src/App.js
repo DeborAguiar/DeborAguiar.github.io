@@ -1,12 +1,12 @@
 import "./App.css";
+import Body from "./components/Body/Body";
 import Navbar from "./components/Navbar/Navbar";
-import form from "./img/blob-haikei.png"
 
 function App() {
   return (
     <div>
-      <Navbar prop="teste" />
-      <img src={form} alt="Descrição da imagem" />
+      <Navbar/>
+      <Body/>
     </div>
   );
 }

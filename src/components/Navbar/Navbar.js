@@ -16,24 +16,46 @@ function Navbar() {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
+        <div class="collapse navbar-collapse justify-content-end">
           <div class="navbar-nav nav">
-            <a class="nav-link active" data-toggle="tab" href="#tab1">
+            <a
+              className="nav-link active"
+              data-toggle="tab"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+            >
               <span>Sobre</span>
             </a>
-            <a class="nav-link" data-toggle="tab" href="#tab2">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+            >
               <span>Projetos</span>
             </a>
-            <a class="nav-link" data-toggle="tab" href="#tab3">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+            >
               <span>Experiências Anteriores</span>
             </a>
-            <a class="nav-link" data-toggle="tab" href="#tab4">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+            >
               <span>Formação</span>
             </a>
-            <a class="nav-link" data-toggle="tab" href="#tab5">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="4"
+            >
               <span>Contato</span>
             </a>
           </div>

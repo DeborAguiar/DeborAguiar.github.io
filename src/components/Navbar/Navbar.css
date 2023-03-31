@@ -1,4 +1,8 @@
-a> * {
+a{
+  cursor: pointer;
+}
+
+a > * {
   text-decoration: none;
   position: relative;
 }
