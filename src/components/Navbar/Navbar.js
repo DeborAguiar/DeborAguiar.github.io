@@ -1,6 +1,16 @@
+import { useState } from "react";
 import "./Navbar.css";
+import NavLink from "./components/NavLink/NavLink";
 
 function Navbar() {
+  const [itens, setItens] = useState([
+    "Sobre",
+    "Projetos",
+    "Experiências Anteriores",
+    "Formação",
+    "Contato",
+  ]);
+
   return (
     <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -16,48 +26,14 @@ function Navbar() {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end">
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
           <div class="navbar-nav nav">
-            <a
-              className="nav-link active"
-              data-toggle="tab"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-            >
-              <span>Sobre</span>
-            </a>
-            <a
-              class="nav-link"
-              data-toggle="tab"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-            >
-              <span>Projetos</span>
-            </a>
-            <a
-              class="nav-link"
-              data-toggle="tab"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-            >
-              <span>Experiências Anteriores</span>
-            </a>
-            <a
-              class="nav-link"
-              data-toggle="tab"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-            >
-              <span>Formação</span>
-            </a>
-            <a
-              class="nav-link"
-              data-toggle="tab"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="4"
-            >
-              <span>Contato</span>
-            </a>
+            {itens.map((item, idx) => (
+              <NavLink item={item} idx={idx} />
+            ))}
           </div>
         </div>
       </div>
