@@ -1,9 +1,9 @@
-a {
+a> * {
   text-decoration: none;
   position: relative;
 }
 
-a::before {
+a > *::before {
   content: "";
   position: absolute;
   left: 0;
@@ -14,11 +14,11 @@ a::before {
   transition: width 0.2s;
 }
 
-a:not(.active)::before {
+a:not(.active) > *::before {
   width: 0;
 }
 
-a.active::before,
-a:hover::before {
+a.active > *::before,
+a:hover > *::before{
   width: 100%;
 }

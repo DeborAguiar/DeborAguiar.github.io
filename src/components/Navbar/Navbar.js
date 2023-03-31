@@ -20,21 +20,21 @@ function Navbar() {
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">
-              Sobre
+          <div class="navbar-nav nav">
+            <a class="nav-link active" data-toggle="tab" href="#tab1">
+              <span>Sobre</span>
             </a>
-            <a class="nav-link" href="#">
-              Projetos
+            <a class="nav-link" data-toggle="tab" href="#tab2">
+              <span>Projetos</span>
             </a>
-            <a class="nav-link" href="#">
-              Experiências Anteriores
+            <a class="nav-link" data-toggle="tab" href="#tab3">
+              <span>Experiências Anteriores</span>
             </a>
-            <a class="nav-link" href="#">
-              Formação
+            <a class="nav-link" data-toggle="tab" href="#tab4">
+              <span>Formação</span>
             </a>
-            <a class="nav-link" href="#">
-              Contato
+            <a class="nav-link" data-toggle="tab" href="#tab5">
+              <span>Contato</span>
             </a>
           </div>
         </div>
