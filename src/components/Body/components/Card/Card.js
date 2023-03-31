@@ -12,7 +12,10 @@ function chosePage(type) {
   switch (type) {
     case "Sobre":
       return (
-        <div className="row justify-content-center">
+        <div
+          style={{ color: `white` }}
+          className="row justify-content-center"
+        >
           <div className="col-md-3 d-flex align-items-center">
             <div style={{ height: "min-content" }}>
               <span style={{ color: `#EF8354` }}>

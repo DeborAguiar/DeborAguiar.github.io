@@ -3,7 +3,7 @@ import "./NavLink.css";
 function NavLink(props) {
   return (
     <a
-      className={`nav-link ${props.idx==0 ? 'active' : ''}`}
+      className={`nav-link m-3 ${props.idx==0 ? 'active' : ''}`}
       data-toggle="tab"
       data-bs-target="#carouselExampleIndicators"
       data-bs-slide-to={`${props.idx}`}

@@ -5,6 +5,7 @@ a{
 a.nav-link > * {
   text-decoration: none;
   position: relative;
+  color: white;
 }
 
 a.nav-link > *::before {
@@ -20,6 +21,7 @@ a.nav-link > *::before {
 
 a.nav-link:not(.active) > *::before {
   width: 0;
+  opacity: 0.5;
 }
 
 a.nav-link.active > *::before,
