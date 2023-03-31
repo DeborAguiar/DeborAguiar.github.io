@@ -1,6 +1,9 @@
+/* https: //coolors.co/d9dcd6-81c3d7-2f6690-3a7ca5-16425b */
 #root {
-    font-family: 'Montserrat', sans-serif;
-}
-nav {
-    background-color: #f6f6f7;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;;
+    background: #4F5D75;
+    background: -moz-radial-gradient(center, #4F5D75 0%, #1C6EA4 0%, #2D3142 100%);
+    background: -webkit-radial-gradient(center, #4F5D75 0%, #1C6EA4 0%, #2D3142 100%);
+    background: radial-gradient(ellipse at center, #4F5D75 0%, #1C6EA4 0%, #2D3142 100%);
 }

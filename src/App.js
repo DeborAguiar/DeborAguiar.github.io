@@ -1,9 +1,13 @@
-import './App.css';
-import MyScene from './estudos/MyScene';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import form from "./img/blob-haikei.png"
 
 function App() {
   return (
-    <MyScene/>
+    <div>
+      <Navbar prop="teste" />
+      <img src={form} alt="Descrição da imagem" />
+    </div>
   );
 }
 
