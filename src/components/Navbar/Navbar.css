@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #EF8354;
+  transition: width 0.2s;
+}
+
+a:not(.active)::before {
+  width: 0;
+}
+
+a.active::before,
+a:hover::before {
+  width: 100%;
+}
