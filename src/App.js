@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.sass";
+import "./App.scss";
 import Body from "./components/Body/Body";
 import Navbar from "./components/Navbar/Navbar";
 
