@@ -1,0 +1,60 @@
+/* https://coolors.co/palette/2d3142-4f5d75-bfc0c0-ffffff-ef8354 */
+/* #region Variaveis */
+$blue-d: #2D3142
+$blue-l: #4F5D75
+$grey: #BFC0C0
+$orange: #EF8354
+/* #endregion */
+/* #region All */
+*
+    height: 100%
+
+#root, #root>* 
+    font-family: 'Rajdhani', sans-serif
+    min-height: 100vh
+    max-height: 100vh
+    background: $blue-d
+    height: "100vh"
+    width: "100vw"
+    background-image: url('./img/carr.svg')
+    background-size: cover
+/* #endregion */
+/* #region Body */
+.container
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 75%
+/* #endregion */
+/* #region Navlink */
+span
+  cursor: pointer
+
+span.nav-link > * 
+  text-decoration: none
+  position: relative
+  color: white
+
+
+span.nav-link > *::before 
+  content: ""
+  position: absolute
+  left: 0
+  bottom: -2px
+  width: 0
+  height: 2px
+  background-color: $orange
+  transition: width 0.2s
+
+
+span.nav-link:not(.active) > *::before 
+  width: 0
+  opacity: 0.5
+
+
+span.nav-link.active > *::before,
+span.nav-link:hover > *::before
+  width: 100%
+
+/* #endregion */

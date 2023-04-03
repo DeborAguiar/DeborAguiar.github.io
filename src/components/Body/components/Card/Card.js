@@ -1,8 +1,7 @@
-import "./Card.css";
 
 function Card(props) {
   return (
-    <div className={`carousel-item ${props.idx == 0 ? "active" : ""}`}>
+    <div className={`carousel-item ${props.idx == 1 ? "active" : ""}`}>
       {chosePage(props.item)}
     </div>
   );
@@ -12,10 +11,7 @@ function chosePage(type) {
   switch (type) {
     case "Sobre":
       return (
-        <div
-          style={{ color: `white` }}
-          className="row justify-content-center"
-        >
+        <div style={{ color: `white` }} className="row justify-content-center">
           <div className="col-md-3 d-flex align-items-center">
             <div style={{ height: "min-content" }}>
               <span style={{ color: `#EF8354` }}>
@@ -54,7 +50,16 @@ function chosePage(type) {
           </div>
         </div>
       );
-    case "Projetos":
+    case "Skills":
+      return (
+        <div
+          className="row rounded mx-auto d-block w-50"
+          style={{ backgroundColor: "#BFC0C0" }}
+        >
+          <div className="col">
+          </div>
+        </div>
+      );
     case "Experiências Anteriores":
     case "Formação":
     case "Contato":
