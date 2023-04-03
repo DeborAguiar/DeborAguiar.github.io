@@ -1,14 +1,16 @@
+import pages from "../../../../Pages";
 import skills from "./Skills";
 
 function Card(props) {
   return (
-    <div className={`carousel-item ${props.idx == 1 ? "active" : ""}`}>
+    <div className={`carousel-item ${props.idx === 1 ? "active" : ""}`}>
       {chosePage(props.item)}
     </div>
   );
 }
 
 function chosePage(type) {
+  //pages
   switch (type) {
     case "Sobre":
       return (
@@ -53,16 +55,17 @@ function chosePage(type) {
     case "Skills":
       skills.sort((a, b) => b.level - a.level);
       return (
-        <div
-          id="skill_container" className="rounded mx-auto d-block w-50 p-3 align-items-center"
-        >
-          <div className="h-auto pt-3">
-            {skills.map(({ skill, level }) => {
-              return <div className="progress mb-3 shadow" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >
-                <div className="progress-bar bg-orange" style={{ width: `${level}%` }}>{skill}</div>
-              </div>
-            })}
+        <div id="skill_container" className="rounded mx-auto d-block w-50 p-3 align-items-center">
+          <div className="row justify-content-md-center align-items-center">
+            <div className="col-12 h-auto">
+              {skills.map(({ skill, level }) => {
+                return <div className="progress mb-3 shadow" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >
+                  <div className="progress-bar bg-orange" style={{ width: `${level}%` }}>{skill}</div>
+                </div>
+              })}
+            </div>
           </div>
+
         </div>
       );
     case "Experiências Anteriores":
