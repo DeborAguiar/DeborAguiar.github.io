@@ -1,3 +1,4 @@
+import skills from "./Skills";
 
 function Card(props) {
   return (
@@ -11,10 +12,10 @@ function chosePage(type) {
   switch (type) {
     case "Sobre":
       return (
-        <div style={{ color: `white` }} className="row justify-content-center">
+        <div className="row justify-content-center text-white">
           <div className="col-md-3 d-flex align-items-center">
-            <div style={{ height: "min-content" }}>
-              <span style={{ color: `#EF8354` }}>
+            <div className="h-auto d-inline-block">
+              <span className="orange_text">
                 Desenvolvimento Front-end
               </span>
               <br />
@@ -23,7 +24,6 @@ function chosePage(type) {
               <br />
               <a href="https://drive.google.com/file/d/102kXJ2zH5rmmwBbccOGbbwTREpc0D4te/view?usp=sharing">
                 <button
-                  style={{ height: "10vh" }}
                   className="btn btn-outline-light btn-lg"
                 >
                   Baixar currículo
@@ -32,7 +32,7 @@ function chosePage(type) {
             </div>
           </div>
           <div className="col-md-6 d-flex align-items-center">
-            <div style={{ height: "min-content" }}>
+            <div className="h-auto d-inline-block">
               <span>
                 Trabalho com desenvolvimento Frontend desde 2021, sou uma
                 desenvolvedora apaixonada por tecnologia com habilidades em
@@ -51,12 +51,17 @@ function chosePage(type) {
         </div>
       );
     case "Skills":
+      skills.sort((a, b) => b.level - a.level);
       return (
         <div
-          className="row rounded mx-auto d-block w-50"
-          style={{ backgroundColor: "#BFC0C0" }}
+          id="skill_container" className="rounded mx-auto d-block w-50 p-3 align-items-center"
         >
-          <div className="col">
+          <div className="h-auto pt-3">
+            {skills.map(({ skill, level }) => {
+              return <div className="progress mb-3 shadow" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >
+                <div className="progress-bar bg-orange" style={{ width: `${level}%` }}>{skill}</div>
+              </div>
+            })}
           </div>
         </div>
       );

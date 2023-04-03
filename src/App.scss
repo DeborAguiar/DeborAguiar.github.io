@@ -5,6 +5,10 @@ $blue-l: #4F5D75;
 $grey: #BFC0C0;
 $orange: #EF8354;
 
+.orange_text{
+  color: $orange;
+}
+
 /* #endregion */
 /* #region All */
 * {
@@ -61,13 +65,26 @@ span.nav-link>*::before {
 
 span.nav-link:not(.active)>*::before {
   width: 0;
-  opacity: 0.5;
 }
 
 
 span.nav-link.active>*::before,
 span.nav-link:hover>*::before {
   width: 100%
+}
+
+/* #endregion */
+/* #region Skills */
+.progress.mb-3.shadow{
+  height: 20px;
+}
+
+#skill_container {
+  background-color: $grey
+}
+
+.bg-orange {
+  background-color: $orange !important;
 }
 
 /* #endregion */
