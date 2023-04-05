@@ -1,15 +1,9 @@
-import { useState } from "react";
 import "./App.scss";
 import Body from "./components/Body/Body";
 import Navbar from "./components/Navbar/Navbar";
+import pages from "./Pages";
 
 function App() {
-  const [pages, setPages] = useState([
-    "Sobre",
-    "Skills",
-    "Projetos",
-    "Contato",
-  ]);
   return (
     <div>
       <Navbar pages={pages} />

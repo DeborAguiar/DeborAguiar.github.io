@@ -9,6 +9,10 @@ $orange: #EF8354;
   color: $orange;
 }
 
+.rounded-circle{
+  background-color: $orange;
+}
+
 /* #endregion */
 /* #region All */
 * {
@@ -79,12 +83,7 @@ span.nav-link:hover>*::before {
   height: 20px;
 }
 
-#skill_container {
-  background-color: $grey
-}
-
 .bg-orange {
   background-color: $orange !important;
 }
-
 /* #endregion */

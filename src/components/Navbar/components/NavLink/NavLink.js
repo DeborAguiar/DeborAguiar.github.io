@@ -4,7 +4,7 @@ function NavLink(props) {
     <span
       className={`nav-link mx-3 pt-3 ${props.idx === 0 ? 'active' : ''}`}
       data-toggle="tab"
-      data-bs-target="#carouselExampleIndicators"
+      data-bs-target="#carouselIndicators"
       data-bs-slide-to={`${props.idx}`}
     >
       <span>{props.item}</span>
