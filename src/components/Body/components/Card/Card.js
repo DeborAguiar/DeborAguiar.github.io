@@ -89,32 +89,35 @@ function chosePage(type) {
         </div>
       </div>
     case "Contato":
-      return <div className="mx-auto d-block w-50 align-items-center text-white">
-        <div className="row justify-content-md-center align-items-center">
-          <div className="col-12 h-auto">
-            <div class="row h-auto justify-content-center mb-5">
+      return <div className="mx-auto d-block w-50 text-white">
+        <div className="row align-items-center"> {/* Centraliza elementos verticalmente */}
+          <div className="col-12 h-auto"> {/* " */}
+            <div class="row justify-content-center mb-5"> {/* Linkedin */}
               <div class="col-8 text-center">
-                <div className="rounded-circle" style={{ width: '55px', height: '55px', }}>
-                  <i className="bi bi-linkedin"></i>
-                </div>
-                <h5>Linkedin</h5>
-                <span>https://www.linkedin.com/in/débora-boni/</span>
+                <a href="https://www.linkedin.com/in/débora-boni/" target="_blank">
+                  <button class="btn btn-primary rounded-circle mb-2">
+                    <i class="bi bi-linkedin"></i>
+                  </button>
+                </a>
+                <p>https://www.linkedin.com/in/débora-boni/</p>
               </div>
             </div>
-            <div class="row h-auto justify-content-evenly">
+            <div class="row justify-content-evenly"> {/* Telefone e E-mail */}
               <div class="col-6 text-center">
-                <div className="rounded-circle" style={{ width: '55px', height: '55px', }}>
-                  <i className="bi bi-whatsapp fs-5"></i>
-                </div>
-                <h5>Telefone</h5>
-                <span>+55 (11) 99660-5776</span>
+                <a href="https://wa.me/5511996605776" target="_blank">
+                  <button class="btn btn-primary rounded-circle mb-2">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </a>
+                <p>+55 (11) 99660-5776</p>
               </div>
               <div class="col-6 text-center">
-                <div className="rounded-circle" style={{ width: '55px', height: '55px', }}>
-                  <i className="bi bi-envelope-fill"></i>
-                </div>
-                <h5>Email</h5>
-                <span>debora.aguiar.boni@gmail.com</span>
+                <a href="mailto:${debora.aguiar.boni@gmail.com}" target="_blank">
+                  <button class="btn btn-primary rounded-circle mb-2">
+                    <i class="bi bi-envelope"></i>
+                  </button>
+                </a>
+                <p>debora.aguiar.boni@gmail.com</p>
               </div>
             </div>
           </div>

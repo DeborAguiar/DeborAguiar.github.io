@@ -9,8 +9,16 @@ $orange: #EF8354;
   color: $orange;
 }
 
+$iconCircleSize: 55px;
+$iconSize: 30px;
 .rounded-circle{
-  background-color: $orange;
+  background-color: $orange !important;
+  border: 0px !important;
+  width: $iconCircleSize;
+  height: $iconCircleSize;
+  :first-child{
+    font-size: $iconSize;
+  };
 }
 
 /* #endregion */
