@@ -2,7 +2,7 @@ import skills from "./Skills";
 
 function Card(props) {
   return (
-    <div className={`carousel-item ${props.idx === 3 ? "active" : ""}`}>
+    <div className={`carousel-item ${props.idx === 0 ? "active" : ""}`}>
       {chosePage(props.item)}
     </div>
   );
@@ -69,21 +69,10 @@ function chosePage(type) {
       return <div className="mx-auto d-block w-50 align-items-center">
         <div className="row justify-content-md-center align-items-center">
           <div className="col-12 h-auto">
-            <div className="accordion h-auto" id="accordion">
-              <div className="accordion-item">
-                <h2 className="accordion-header">
-                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span className="orange_text">
-                      Accordion Item #2
-                    </span>
-                  </button>
-                </h2>
-                <div id="collapseTwo" className="orange_text accordion-collapse collapse" data-bs-parent="#accordion">
-                  <div className="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
+            <div class="list-group">
+              <a href="https://deboraguiar.github.io/AmazonIA/" class="list-group-item list-group-item-action">A second link item</a>
+              <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+              <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
             </div>
           </div>
         </div>
